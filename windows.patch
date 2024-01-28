@@ -1,0 +1,16 @@
+diff --git a/python/_jsonnet.c b/python/_jsonnet.c
+index d509b72..e2feae8 100644
+--- a/python/_jsonnet.c
++++ b/python/_jsonnet.c
+@@ -21,6 +21,11 @@ limitations under the License.
+ 
+ #include "libjsonnet.h"
+ 
++#if defined(_MSC_VER)
++#include <BaseTsd.h>
++typedef SSIZE_T ssize_t;
++#endif
++
+ static char *jsonnet_str(struct JsonnetVm *vm, const char *str)
+ {
+     size_t size = strlen(str) + 1;

@@ -1,0 +1,6 @@
+include jsonnet/LICENSE jsonnet/include/*.h jsonnet/core/*.cpp jsonnet/core/*.h jsonnet/python/*.c jsonnet/stdlib/std.jsonnet jsonnet/Makefile
+include jsonnet/third_party/json/*.hpp
+include jsonnet/third_party/md5/*.cpp jsonnet/third_party/md5/*.h
+recursive-include jsonnet/third_party/rapidyaml/rapidyaml *.hpp *.cpp *.h
+#recursive-include test_suite examples gc_stress benchmarks editors
+
